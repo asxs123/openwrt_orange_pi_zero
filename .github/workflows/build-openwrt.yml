@@ -73,20 +73,6 @@ jobs:
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
-      
-    - name: Generate configuration file
-      run: |
-        rm -f ./.config*
-        touch ./.config
-        cat >> .config <<EOF
-        CONFIG_TARGET_sunxi=y
-        CONFIG_TARGET_sunxi_cortexa7=y
-        CONFIG_TARGET_sunxi_cortexa7_DEVICE_xunlong_orangepi-zero=y
-        EOF
-          # ========================固件定制部分结束========================
-          # 
-        sed -i 's/^[ \t]*//g' ./.config
-        make defconfig
 
     - name: Load custom configuration
       run: |
