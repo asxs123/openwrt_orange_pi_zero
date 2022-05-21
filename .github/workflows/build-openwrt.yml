@@ -81,6 +81,21 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
+        
+        
+    - name: Generate configuration file
+      run: |
+        rm -f ./.config*
+        touch ./.config
+        cat >> .config <<EOF
+        CONFIG_TARGET_sunxi=y
+        CONFIG_TARGET_sunxi_cortexa7=y
+        CONFIG_TARGET_sunxi_cortexa7_DEVICE_xunlong_orangepi-zero=y
+        EOF
+          # ========================固件定制部分结束========================
+          # 
+        sed -i 's/^[ \t]*//g' ./.config
+        make defconfig
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
