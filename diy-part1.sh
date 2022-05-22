@@ -20,3 +20,6 @@ echo 'src-git jerryk https://github.com/jerrykuku/openwrt-package' >>feeds.conf.
 
 # add package
 git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb  #git lua-maxminddb 依赖
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
