@@ -24,3 +24,4 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/l
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb  #git lua-maxminddb 依赖
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
 git clone https://github.com/DevOpenWRT-Router/luci-app-cpulimit.git package/lean/luci-app-cpulimit
+git clone https://github.com/asxs123/mypackages.git package/mypackages
